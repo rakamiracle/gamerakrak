@@ -1,0 +1,68 @@
+h1,
+h2 {
+  font-size: 55px;
+  text-align: center;
+  font-family: arial;
+  margin: 10px;
+}
+
+button {
+  display: block;
+  margin: 20px auto; /* Ubah margin atas dan bawah menjadi 20px, dan margin kiri-kanan menjadi auto untuk menempatkan tombol di tengah secara horizontal */
+  padding: 10px 20px; /* Atur padding agar tombol terlihat lebih berisi */
+  font-size: 16px; /* Sesuaikan ukuran font */
+  font-weight: bold; /* Membuat teks tombol lebih tebal */
+  text-transform: uppercase; /* Mengubah teks menjadi huruf besar */
+  color: #fff; /* Warna teks */
+  background-color: #007bff; /* Warna latar belakang */
+  border: none; /* Hilangkan border */
+  border-radius: 5px; /* Agar tombol terlihat lebih bulat */
+  cursor: pointer; /* Ubah kursor menjadi tangan saat diarahkan ke tombol */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan shadow */
+  transition: background-color 0.3s, transform 0.3s; /* Efek transisi untuk hover */
+}
+
+button:hover {
+  background-color: #0056b3; /* Warna latar belakang saat tombol dihover */
+  transform: translateY(-2px); /* Efek naik sedikit saat dihover */
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  cursor: auto;
+  /* border: 1px solid coral; */
+}
+
+.tanah {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.tanah::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 100px;
+  background: url(../img/tanah.png) bottom center no-repeat;
+  background-size: 80%;
+  position: absolute;
+  bottom: -55px;
+}
+
+.tikus {
+  width: 100%;
+  height: 100%;
+  background: url(../img/tikus.png) bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100px;
+  transition: top 0.3s;
+}
+
+.tanah.muncul .tikus {
+  top: 0;
+}
